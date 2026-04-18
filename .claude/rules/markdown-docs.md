@@ -18,5 +18,5 @@
 ## Formatting
 
 - Use tables for structured comparisons (see README CONCEPTS table as reference)
-- Use badge images from `!/tags/` for visual consistency when linking best-practice or implementation docs
+- Use shields.io badges or text labels for visual consistency when linking best-practice or implementation docs
 - Keep headings hierarchical — don't skip levels (e.g., don't jump from `##` to `####`)
