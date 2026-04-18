@@ -2,12 +2,7 @@
 
 通过 CLAUDE.md 文件实现的持久化上下文 — 如何编写以及在单仓库中如何加载。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
