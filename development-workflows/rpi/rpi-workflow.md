@@ -4,12 +4,7 @@
 
 一个带有验证门控的系统化开发工作流。防止在不可行的功能上浪费精力，并确保完整的文档记录。
 
-<table width="100%">
-<tr>
-<td><a href="../../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../../)
 
 ---
 
