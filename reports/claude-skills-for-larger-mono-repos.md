@@ -2,12 +2,7 @@
 
 在 monorepo 中使用 Claude Code 时，理解技能是如何被发现和加载到上下文中的，对于有效组织项目特定功能至关重要。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ## 与 CLAUDE.md 的重要区别
 
