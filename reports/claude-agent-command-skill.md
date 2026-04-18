@@ -2,12 +2,7 @@
 
 Claude Code 三种扩展机制的比较：子代理、命令和技能。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ![斜杠菜单显示 time-skill、time-command 和 time-agent](assets/agent-command-skill-1.jpg)
 
