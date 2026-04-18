@@ -2,12 +2,7 @@
 
 已部署的 LLM 在模型权重冻结的情况下，其性能是否会逐日变化？对已证实的原因、基础设施 Bug 和心理因素的深入分析。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
