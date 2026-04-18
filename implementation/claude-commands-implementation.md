@@ -2,16 +2,11 @@
 
 ![Last Updated](https://img.shields.io/badge/Last_Updated-Mar_02%2C_2026-white?style=flat&labelColor=555)
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
-<a href="#weather-orchestrator"><img src="../!/tags/implemented-hd.svg" alt="Implemented"></a>
+**✅ 已实现**
 
 天气编排命令在本仓库中作为 **命令 → 代理 → 技能** 架构模式的入口点实现，演示了命令如何编排多步骤工作流。
 
@@ -53,7 +48,7 @@ Use the Skill tool to invoke the weather-svg-creator skill:
 
 ---
 
-## ![如何使用](../!/tags/how-to-use.svg)
+## 如何使用
 
 ```bash
 $ claude
@@ -62,13 +57,13 @@ $ claude
 
 ---
 
-## ![如何实现](../!/tags/how-to-implement.svg)
+## 如何实现
 
 让 Claude 为你创建一个 — 它会在 `.claude/commands/<name>.md` 中生成带有 YAML 前置元数据和正文的 markdown 文件
 
 ---
 
-<a href="https://github.com/shanraisshan/claude-code-best-practice#orchestration-workflow"><img src="../!/tags/orchestration-workflow-hd.svg" alt="Orchestration Workflow"></a>
+**🔗 编排工作流**
 
 天气编排器是命令 → 代理 → 技能编排模式中的**命令**。它作为入口点 — 处理用户交互（温度单位偏好），将数据获取委托给 `weather-agent`，并调用 `weather-svg-creator` 技能生成可视化输出。
 
