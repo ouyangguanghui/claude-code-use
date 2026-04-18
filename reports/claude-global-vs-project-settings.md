@@ -2,12 +2,7 @@
 
 全面比较 Claude Code 中哪些功能仅限全局（`~/.claude/`），哪些同时具有全局和项目级（`.claude/`）等价物。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ## 目录
 
