@@ -1,55 +1,54 @@
-# Cross-Model (Claude Code + Codex) Workflow
+# 跨模型（Claude Code + Codex）工作流
 
-based on [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) and [codex-cli-best-practice](https://github.com/shanraisshan/codex-cli-best-practice)
+基于 [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) 和 [codex-cli-best-practice](https://github.com/shanraisshan/codex-cli-best-practice)
 
-## Workflow
+## 工作流
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│              CROSS-MODEL CLAUDE CODE + CODEX WORKFLOW                   │
+│              跨模型 CLAUDE CODE + CODEX 工作流                          │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│  STEP 1: PLAN                                          Claude Code      │
+│  步骤 1: 规划                                          Claude Code      │
 │  ─────────────                                         Opus 4.6         │
-│  Open Claude Code in plan mode (Terminal 1).           Plan Mode        │
-│  Claude interviews you via AskUserQuestion.                             │
-│  Produces a phased plan with test gates.                                │
+│  在计划模式下打开 Claude Code（终端 1）。               Plan Mode        │
+│  Claude 通过 AskUserQuestion 采访你。                                   │
+│  生成带有测试门控的分阶段计划。                                          │
 │                                                                         │
-│  Output: plans/{feature-name}.md                                        │
+│  输出: plans/{feature-name}.md                                          │
 │                                                                         │
 │                              ▼                                          │
 │                                                                         │
-│  STEP 2: QA REVIEW                                     Codex CLI        │
+│  步骤 2: QA 审查                                       Codex CLI        │
 │  ──────────────────                                    GPT-5.4          │
-│  Open Codex CLI in another terminal (Terminal 2).                       │
-│  Codex reviews plan against the actual codebase.                        │
-│  Inserts intermediate phases ("Phase 2.5")                              │
-│  with "Codex Finding" headings.                                         │
-│  Adds to the plan — never rewrites original phases.                     │
+│  在另一个终端打开 Codex CLI（终端 2）。                                  │
+│  Codex 对照实际代码库审查计划。                                          │
+│  插入中间阶段（"Phase 2.5"）                                            │
+│  并添加 "Codex Finding" 标题。                                          │
+│  在计划中追加内容 —— 从不重写原有阶段。                                  │
 │                                                                         │
-│  Output: plans/{feature-name}.md (updated)                              │
+│  输出: plans/{feature-name}.md（已更新）                                 │
 │                                                                         │
 │                              ▼                                          │
 │                                                                         │
-│  STEP 3: IMPLEMENT                                     Claude Code      │
+│  步骤 3: 实现                                          Claude Code      │
 │  ──────────────────                                    Opus 4.6         │
-│  Start a new Claude Code session (Terminal 1).                          │
-│  You implement phase-by-phase                                           │
-│  with test gates at each phase.                                         │
+│  启动新的 Claude Code 会话（终端 1）。                                   │
+│  你逐阶段实现                                                           │
+│  每个阶段都有测试门控。                                                  │
 │                                                                         │
 │                              ▼                                          │
 │                                                                         │
-│  STEP 4: VERIFY                                        Codex CLI        │
+│  步骤 4: 验证                                          Codex CLI        │
 │  ────────────────                                      GPT-5.4          │
-│  Start a new Codex CLI session (Terminal 2).                            │
-│  Codex verifies the implementation                                      │
-│  against the plan.                                                      │
+│  启动新的 Codex CLI 会话（终端 2）。                                     │
+│  Codex 对照计划验证实现。                                                │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-## How cross-model workflow actually looks in production
+## 跨模型工作流在生产中的实际样子
 
-![Cross-Model Workflow](assets/cross-model-workflow.png)
+![跨模型工作流](assets/cross-model-workflow.png)
 
-*Last Updated: 2026-03-06*
+*最后更新：2026-03-06*

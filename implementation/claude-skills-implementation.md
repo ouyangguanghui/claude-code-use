@@ -1,10 +1,10 @@
-# Skills Implementation
+# 技能实现
 
 ![Last Updated](https://img.shields.io/badge/Last_Updated-Mar_02%2C_2026-white?style=flat&labelColor=555)
 
 <table width="100%">
 <tr>
-<td><a href="../">← Back to Claude Code Best Practice</a></td>
+<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
 <td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
 </tr>
 </table>
@@ -13,13 +13,13 @@
 
 <a href="#weather-svg-creator"><img src="../!/tags/implemented-hd.svg" alt="Implemented"></a>
 
-Two skills are implemented in this repo as part of the **Command → Agent → Skill** architecture pattern, demonstrating two distinct skill invocation patterns: **agent skills** (preloaded) and **skills** (invoked directly).
+本仓库实现了两个技能，作为 **命令 → 代理 → 技能** 架构模式的一部分，演示了两种不同的技能调用模式：**代理技能**（预加载）和**技能**（直接调用）。
 
 ---
 
-## Weather SVG Creator (Skill)
+## Weather SVG Creator（技能）
 
-**File**: [`.claude/skills/weather-svg-creator/SKILL.md`](../.claude/skills/weather-svg-creator/SKILL.md)
+**文件**：[`.claude/skills/weather-svg-creator/SKILL.md`](../.claude/skills/weather-svg-creator/SKILL.md)
 
 ```yaml
 ---
@@ -53,13 +53,13 @@ Write to `orchestration-workflow/output.md`...
 ...
 ```
 
-This is a **skill** — invoked directly by the command via the Skill tool. It receives the temperature data from the conversation context and creates the SVG weather card and output summary.
+这是一个**技能** — 由命令通过 Skill 工具直接调用。它从对话上下文接收温度数据，创建 SVG 天气卡片和输出摘要。
 
 ---
 
-## Weather Fetcher (Agent Skill)
+## Weather Fetcher（代理技能）
 
-**File**: [`.claude/skills/weather-fetcher/SKILL.md`](../.claude/skills/weather-fetcher/SKILL.md)
+**文件**：[`.claude/skills/weather-fetcher/SKILL.md`](../.claude/skills/weather-fetcher/SKILL.md)
 
 ```yaml
 ---
@@ -87,22 +87,22 @@ Fetch the current temperature for Dubai, UAE in the requested unit
 ...
 ```
 
-This is an **agent skill** — preloaded into the `weather-agent` at startup via the `skills:` frontmatter field. It is not invoked directly; instead, it serves as domain knowledge injected into the agent's context. Note `user-invocable: false` which hides it from the `/` command menu.
+这是一个**代理技能** — 在启动时通过 `skills:` 前置元数据字段预加载到 `weather-agent` 中。它不会被直接调用；而是作为注入到代理上下文中的领域知识。注意 `user-invocable: false` 会将其从 `/` 命令菜单中隐藏。
 
 ---
 
-## Two Skill Patterns
+## 两种技能模式
 
-| Pattern | Invocation | Example | Key Difference |
-|---------|-----------|---------|----------------|
-| **Skill** | `Skill(skill: "name")` | `weather-svg-creator` | Invoked directly via Skill tool |
-| **Agent Skill** | Preloaded via `skills:` field | `weather-fetcher` | Injected into agent context at startup |
+| 模式 | 调用方式 | 示例 | 关键区别 |
+|------|----------|------|----------|
+| **技能** | `Skill(skill: "name")` | `weather-svg-creator` | 通过 Skill 工具直接调用 |
+| **代理技能** | 通过 `skills:` 字段预加载 | `weather-fetcher` | 在启动时注入到代理上下文中 |
 
 ---
 
-## ![How to Use](../!/tags/how-to-use.svg)
+## ![如何使用](../!/tags/how-to-use.svg)
 
-**Skill** — invoke directly via slash command:
+**技能** — 通过斜杠命令直接调用：
 ```bash
 $ claude
 > /weather-svg-creator
@@ -110,9 +110,9 @@ $ claude
 
 ---
 
-## ![How to Implement](../!/tags/how-to-implement.svg)
+## ![如何实现](../!/tags/how-to-implement.svg)
 
-Ask Claude to create one for you — it will generate the markdown file with YAML frontmatter and body in `.claude/skills/my-skill/SKILL.md`
+让 Claude 为你创建一个 — 它会在 `.claude/skills/my-skill/SKILL.md` 中生成带有 YAML 前置元数据和正文的 markdown 文件
 
 # My Skill
 

@@ -1,117 +1,116 @@
-# 6 Tips for Getting More Out of Opus 4.7 — From Boris Cherny
+# 更好地使用 Opus 4.7 的 6 个技巧 — Boris Cherny
 
-A thread of tips shared by Boris Cherny ([@bcherny](https://x.com/bcherny)), creator of Claude Code, on April 16, 2026 — after dogfooding Opus 4.7 for the last few weeks.
+Boris Cherny ([@bcherny](https://x.com/bcherny))，Claude Code 的创建者，在内部测试 Opus 4.7 几周后于 2026 年 4 月 16 日分享的技巧汇总。
 
 <table width="100%">
 <tr>
-<td><a href="../">← Back to Claude Code Best Practice</a></td>
+<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
 <td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
 </tr>
 </table>
 
 ---
 
-## Context
+## 背景
 
-After dogfooding Opus 4.7 for a few weeks, Boris has been feeling "incredibly productive" and shared six ways to get more out of the new model — from permission automation to effort tuning to verification patterns.
+在内部测试 Opus 4.7 几周后，Boris 感觉"效率极高"，分享了六种充分利用新模型的方式 — 从权限自动化到努力程度调整再到验证模式。
 
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/0.png" alt="Boris Cherny intro tweet — dogfooding Opus 4.7" width="50%" /></a>
-
----
-
-## 1/ Auto Mode — No More Permission Prompts
-
-Opus 4.7 loves doing complex, long-running tasks: deep research, refactoring code, building complex features, iterating until a performance benchmark is hit. In the past, you either had to babyset the model while it did these sorts of long tasks, or use `--dangerously-skip-permissions`.
-
-Anthropic recently rolled out **auto mode** as a safer alternative. In this mode, permission prompts are routed to a model-based classifier that decides whether the command is safe to run:
-
-- If it's safe, auto-approve
-- If it's risky, pause and ask
-
-This means no more babysitting while the model runs. More than that, it means you can run more Claudes in parallel — if safe, you can switch focus to the next Claude.
-
-Auto mode is now available for Opus 4.7 for Max, Teams, and Enterprise users. **Shift+Tab** to cycle between `Ask permissions` → `Plan mode` → `Auto mode` in the CLI, or choose it from the dropdown in Desktop or VS Code.
-
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/1.png" alt="Boris Cherny on auto mode" width="50%" /></a>
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/0.png" alt="Boris Cherny 介绍推文 — 内部测试 Opus 4.7" width="50%" /></a>
 
 ---
 
-## 2/ The New /fewer-permission-prompts Skill
+## 1/ 自动模式 — 不再有权限提示
 
-Anthropic released a new `/fewer-permission-prompts` skill. It scans through your session history to find common bash and MCP commands that are safe but repeatedly prompt for permission. It then recommends a list of commands to add to your permissions allowlist.
+Opus 4.7 擅长执行复杂、长时间运行的任务：深度研究、重构代码、构建复杂功能、迭代直到达到性能基准。过去，你要么在模型执行这类长任务时看着它，要么使用 `--dangerously-skip-permissions`。
 
-Use this to tune up your permissions and avoid unnecessary permission prompts, especially if you don't use auto mode.
+Anthropic 最近推出了**自动模式**作为更安全的替代方案。在此模式下，权限提示被路由到一个基于模型的分类器来决定命令是否安全运行：
 
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/2.png" alt="Boris Cherny on /fewer-permission-prompts skill" width="50%" /></a>
+- 如果安全，自动批准
+- 如果有风险，暂停并询问
+
+这意味着模型运行时不再需要看着。更重要的是，这意味着你可以并行运行更多 Claude — 如果安全，你可以将注意力切换到下一个 Claude。
+
+自动模式现在为 Max、Teams 和 Enterprise 用户提供的 Opus 4.7 可用。在 CLI 中 **Shift+Tab** 在 `请求权限` → `计划模式` → `自动模式` 之间循环，或在桌面端或 VS Code 的下拉菜单中选择。
+
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/1.png" alt="Boris Cherny 关于自动模式" width="50%" /></a>
 
 ---
 
-## 3/ Recaps
+## 2/ 新的 /fewer-permission-prompts 技能
 
-Anthropic shipped **recaps** earlier this week, to prep for Opus 4.7. Recaps are short summaries of what an agent did and what's next.
+Anthropic 发布了新的 `/fewer-permission-prompts` 技能。它扫描你的会话历史，找到安全但反复提示权限的常见 bash 和 MCP 命令。然后推荐一个命令列表添加到你的权限允许列表中。
 
-Very useful when returning to a long-running session after a few minutes or a few hours:
+使用它来调整权限并避免不必要的权限提示，特别是如果你不使用自动模式。
+
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/2.png" alt="Boris Cherny 关于 /fewer-permission-prompts 技能" width="50%" /></a>
+
+---
+
+## 3/ 回顾摘要
+
+Anthropic 本周早些时候发布了**回顾摘要**，为 Opus 4.7 做准备。回顾摘要是代理所做工作和下一步的简短总结。
+
+在离开几分钟或几个小时后返回长时间运行的会话时非常有用：
 
 ```
-* Cogitated for 6m 27s
+* 思考了 6分 27秒
 
-* recap: Fixing the post-submit transcript shift bug. The styling-flash
-  part is shipped as PR #29869 (auto-merge on, posted to stamps). Next:
-  I need a screen recording of the remaining horizontal rewrap on `cc -c`
-  to target that separate cause. (disable recaps in /config)
+* recap: 修复了提交后转录偏移的 bug。样式闪烁部分已作为 PR #29869 发布
+  （自动合并已开启，已发布到 stamps）。下一步：我需要 `cc -c` 上
+  剩余水平重排的屏幕录制来定位那个单独的原因。(在 /config 中禁用 recaps)
 ```
 
-Disable recaps in `/config` if you don't want them.
+如果不需要可以在 `/config` 中禁用回顾摘要。
 
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/3.png" alt="Boris Cherny on recaps" width="50%" /></a>
-
----
-
-## 4/ Focus Mode
-
-Boris has been loving the new **focus mode** in the CLI, which hides all the intermediate work to just focus on the final result. The model has reached a point where he generally trusts it to run the right commands and make the right edits. He just looks at the final result.
-
-Use `/focus` to toggle on/off.
-
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/4.png" alt="Boris Cherny on focus mode" width="50%" /></a>
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/3.png" alt="Boris Cherny 关于回顾摘要" width="50%" /></a>
 
 ---
 
-## 5/ Configure Your Effort Level
+## 4/ 专注模式
 
-Opus 4.7 uses **adaptive thinking** instead of thinking budgets. To tune the model to think more or less, tune effort.
+Boris 一直很喜欢 CLI 中新的**专注模式**，它隐藏所有中间工作只关注最终结果。模型已经达到了一个他通常信任它运行正确的命令和做正确的编辑的程度。他只看最终结果。
 
-- **Lower effort** — faster responses and lower token usage
-- **Higher effort** — the most intelligence and capability
+使用 `/focus` 来开关。
 
-The slider presents five levels: `low` · `medium` · `high` · `xhigh` · `max` — Speed on the left, Intelligence on the right.
-
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/5.png" alt="Boris Cherny on effort levels" width="50%" /></a>
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/4.png" alt="Boris Cherny 关于专注模式" width="50%" /></a>
 
 ---
 
-## 6/ Give Claude a Way to Verify Its Work
+## 5/ 配置你的努力程度
 
-Finally, make sure Claude has a way to verify its work. This has always been important — now 4.7 is 2-3x what you get out of Claude, so it's more important than ever.
+Opus 4.7 使用**自适应思考**而不是思考预算。要调整模型思考更多或更少，调整努力程度。
 
-Verification looks different depending on the task:
+- **较低的努力程度** — 更快的响应和更低的 token 使用
+- **较高的努力程度** — 最高的智能和能力
 
-- **Backend work** — have Claude run your server/service to test end-to-end
-- **Frontend work** — use the [Claude Chromium extension](https://code.claude.com/docs/en/chrome) to give Claude a way to control your browser
-- **Desktop apps** — use Computer Use
+滑块呈现五个级别：`low` · `medium` · `high` · `xhigh` · `max` — 左边是速度，右边是智能。
 
-Boris's prompts these days look like `Claude do blah blah /go`, where `/go` is a skill that:
-
-1. Tests itself end-to-end using bash, browser, or computer use
-2. Runs `/simplify`
-3. Puts up a PR
-
-For long-running work, verification matters even more — when you come back to a task, you know the code works.
-
-<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/6.png" alt="Boris Cherny on verification" width="50%" /></a>
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/5.png" alt="Boris Cherny 关于努力程度" width="50%" /></a>
 
 ---
 
-## Sources
+## 6/ 给 Claude 一种验证工作的方式
 
-- [Boris Cherny (@bcherny) on X — April 16, 2026](https://x.com/bcherny)
+最后，确保 Claude 有一种验证其工作的方式。这一直都很重要 — 现在 4.7 是你从 Claude 获得的 2-3 倍，所以它比以往更重要。
+
+验证因任务而异：
+
+- **后端工作** — 让 Claude 运行你的服务器/服务来端到端测试
+- **前端工作** — 使用 [Claude Chromium 扩展](https://code.claude.com/docs/en/chrome) 给 Claude 一种控制你浏览器的方式
+- **桌面应用** — 使用 Computer Use
+
+Boris 现在的提示看起来像 `Claude do blah blah /go`，其中 `/go` 是一个技能，它：
+
+1. 使用 bash、浏览器或 computer use 进行端到端自测
+2. 运行 `/simplify`
+3. 创建 PR
+
+对于长时间运行的工作，验证更加重要 — 当你回到任务时，你知道代码是有效的。
+
+<a href="https://x.com/bcherny"><img src="assets/boris-26-4-16/6.png" alt="Boris Cherny 关于验证" width="50%" /></a>
+
+---
+
+## 来源
+
+- [Boris Cherny (@bcherny) on X — 2026 年 4 月 16 日](https://x.com/bcherny)

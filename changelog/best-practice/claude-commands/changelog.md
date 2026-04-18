@@ -1,234 +1,234 @@
-# Commands Report — Changelog History
+# Commands 报告 — 变更日志历史
 
-## Status Legend
+## 状态图例
 
-| Status | Meaning |
+| 状态 | 含义 |
 |--------|---------|
-| ✅ `COMPLETE (reason)` | Action was taken and resolved successfully |
-| ❌ `INVALID (reason)` | Finding was incorrect, not applicable, or intentional |
-| ✋ `ON HOLD (reason)` | Action deferred — waiting on external dependency or user decision |
+| ✅ `COMPLETE (原因)` | 已采取操作并成功解决 |
+| ❌ `INVALID (原因)` | 发现不正确、不适用或属于设计意图 |
+| ✋ `ON HOLD (原因)` | 操作已推迟 — 等待外部依赖或用户决定 |
 
 ---
 
 ## [2026-03-13 04:23 PM PKT] Claude Code v2.1.74
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Field | Add `name` to frontmatter table — display name for the skill | ❌ INVALID (skill-only field, not applicable to commands frontmatter) |
-| 2 | HIGH | New Field | Add `disable-model-invocation` to frontmatter table — prevents auto-loading | ❌ INVALID (skill-only field, not applicable to commands frontmatter) |
-| 3 | HIGH | New Field | Add `user-invocable` to frontmatter table — hides from `/` menu | ❌ INVALID (skill-only field, not applicable to commands frontmatter) |
-| 4 | HIGH | New Field | Add `context` to frontmatter table — fork to run in subagent context | ❌ INVALID (skill-only field, not applicable to commands frontmatter) |
-| 5 | HIGH | New Field | Add `agent` to frontmatter table — subagent type for context: fork | ❌ INVALID (skill-only field, not applicable to commands frontmatter) |
-| 6 | HIGH | New Field | Add `hooks` to frontmatter table — lifecycle hooks scoped to skill | ❌ INVALID (skill-only field, not applicable to commands frontmatter) |
-| 7 | HIGH | New Command | Add `/btw <question>` — ask a quick side question without adding to conversation | ✅ COMPLETE (added as #53 in Session tag) |
-| 8 | HIGH | New Command | Add `/hooks` — manage hook configurations for tool events | ✅ COMPLETE (added as #30 in Extensions tag) |
-| 9 | HIGH | New Command | Add `/insights` — generate session analysis report | ✅ COMPLETE (added as #17 in Context tag) |
-| 10 | HIGH | New Command | Add `/plugin` — manage Claude Code plugins | ✅ COMPLETE (added as #33 in Extensions tag) |
-| 11 | HIGH | New Command | Add `/skills` — list available skills | ✅ COMPLETE (added as #35 in Extensions tag) |
-| 12 | HIGH | New Command | Add `/upgrade` — open upgrade page to switch plan tier | ✅ COMPLETE (added as #3 in Auth tag) |
-| 13 | HIGH | Removed Command | Remove `/output-style` — deprecated in v2.1.73, use `/config` instead | ✅ COMPLETE (removed from Config tag) |
-| 14 | HIGH | Removed Command | Remove `/bug` row — now listed as alias under `/feedback` | ✅ COMPLETE (removed row, added "Alias: /bug" to /feedback description) |
-| 15 | HIGH | Changed Description | Update `/passes` — repurposed from review passes to referral sharing | ✅ COMPLETE (updated description, kept in Model tag) |
-| 16 | HIGH | Changed Description | Update `/review` — deprecated, replaced by `code-review` marketplace plugin | ✅ COMPLETE (updated description in Project tag) |
-| 17 | MED | Changed Description | Update `/stickers` — changed from UI sticker packs to ordering physical stickers | ✅ COMPLETE (updated description in Config tag) |
+| 1 | HIGH | 新字段 | 在 frontmatter 表中添加 `name` — Skill 的显示名称 | ❌ INVALID (仅限 Skill 的字段，不适用于 Command frontmatter) |
+| 2 | HIGH | 新字段 | 在 frontmatter 表中添加 `disable-model-invocation` — 防止自动加载 | ❌ INVALID (仅限 Skill 的字段，不适用于 Command frontmatter) |
+| 3 | HIGH | 新字段 | 在 frontmatter 表中添加 `user-invocable` — 从 `/` 菜单中隐藏 | ❌ INVALID (仅限 Skill 的字段，不适用于 Command frontmatter) |
+| 4 | HIGH | 新字段 | 在 frontmatter 表中添加 `context` — fork 以在子代理上下文中运行 | ❌ INVALID (仅限 Skill 的字段，不适用于 Command frontmatter) |
+| 5 | HIGH | 新字段 | 在 frontmatter 表中添加 `agent` — `context: fork` 的子代理类型 | ❌ INVALID (仅限 Skill 的字段，不适用于 Command frontmatter) |
+| 6 | HIGH | 新字段 | 在 frontmatter 表中添加 `hooks` — 作用域限定于 Skill 的生命周期 Hook | ❌ INVALID (仅限 Skill 的字段，不适用于 Command frontmatter) |
+| 7 | HIGH | 新 Command | 添加 `/btw <question>` — 快速提问而不添加到对话中 | ✅ COMPLETE (已添加为 Session 标签中的 #53) |
+| 8 | HIGH | 新 Command | 添加 `/hooks` — 管理工具事件的 Hook 配置 | ✅ COMPLETE (已添加为 Extensions 标签中的 #30) |
+| 9 | HIGH | 新 Command | 添加 `/insights` — 生成会话分析报告 | ✅ COMPLETE (已添加为 Context 标签中的 #17) |
+| 10 | HIGH | 新 Command | 添加 `/plugin` — 管理 Claude Code 插件 | ✅ COMPLETE (已添加为 Extensions 标签中的 #33) |
+| 11 | HIGH | 新 Command | 添加 `/skills` — 列出可用的 Skill | ✅ COMPLETE (已添加为 Extensions 标签中的 #35) |
+| 12 | HIGH | 新 Command | 添加 `/upgrade` — 打开升级页面以切换套餐层级 | ✅ COMPLETE (已添加为 Auth 标签中的 #3) |
+| 13 | HIGH | 已移除 Command | 移除 `/output-style` — 在 v2.1.73 中已弃用，请改用 `/config` | ✅ COMPLETE (已从 Config 标签中移除) |
+| 14 | HIGH | 已移除 Command | 移除 `/bug` 行 — 现已作为 `/feedback` 的别名列出 | ✅ COMPLETE (已移除该行，在 /feedback 描述中添加了 "Alias: /bug") |
+| 15 | HIGH | 描述变更 | 更新 `/passes` — 用途从审查轮次改为推荐分享 | ✅ COMPLETE (已更新描述，保留在 Model 标签中) |
+| 16 | HIGH | 描述变更 | 更新 `/review` — 已弃用，被 `code-review` marketplace 插件取代 | ✅ COMPLETE (已更新 Project 标签中的描述) |
+| 17 | MED | 描述变更 | 更新 `/stickers` — 从 UI 贴纸包改为订购实体贴纸 | ✅ COMPLETE (已更新 Config 标签中的描述) |
 
 ---
 
 ## [2026-03-15 12:50 PM PKT] Claude Code v2.1.76
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/color [color\|default]` to Config tag — set prompt bar color for current session | ✅ COMPLETE (added as #4 in Config tag) |
-| 2 | HIGH | New Command | Add `/effort [low\|medium\|high\|max\|auto]` to Model tag — set model effort level | ✅ COMPLETE (added as #38 in Model tag) |
-| 3 | MED | Changed Description | Update `/status` — now "Open the Settings interface (Status tab)" instead of "Show a concise session status summary" | ✅ COMPLETE (updated description at #20 in Context tag) |
-| 4 | MED | Changed Description | Update `/desktop` — now "Continue the current session in the Claude Code Desktop app. macOS and Windows only." | ✅ COMPLETE (updated description at #49 in Remote tag) |
-| 5 | LOW | Changed Argument | Update `/init` — official docs dropped `[prompt]` argument hint | ✅ COMPLETE (removed [prompt] hint at #45 in Project tag) |
+| 1 | HIGH | 新 Command | 在 Config 标签中添加 `/color [color\|default]` — 设置当前会话的提示栏颜色 | ✅ COMPLETE (已添加为 Config 标签中的 #4) |
+| 2 | HIGH | 新 Command | 在 Model 标签中添加 `/effort [low\|medium\|high\|max\|auto]` — 设置模型努力程度 | ✅ COMPLETE (已添加为 Model 标签中的 #38) |
+| 3 | MED | 描述变更 | 更新 `/status` — 现为 "Open the Settings interface (Status tab)" 而非 "Show a concise session status summary" | ✅ COMPLETE (已更新 Context 标签中 #20 的描述) |
+| 4 | MED | 描述变更 | 更新 `/desktop` — 现为 "Continue the current session in the Claude Code Desktop app. macOS and Windows only." | ✅ COMPLETE (已更新 Remote 标签中 #49 的描述) |
+| 5 | LOW | 参数变更 | 更新 `/init` — 官方文档移除了 `[prompt]` 参数提示 | ✅ COMPLETE (已移除 Project 标签中 #45 的 [prompt] 提示) |
 
 ---
 
 ## [2026-03-17 12:45 PM PKT] Claude Code v2.1.77
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Alias | Add `Alias: /branch` to `/fork` entry (v2.1.77 renamed fork→branch) | ✅ COMPLETE (added "Alias: /branch" to /fork at #59 in Session tag) |
-| 2 | HIGH | New Aliases | Add aliases to 8 commands: `/clear` (+/reset, /new), `/config` (+/settings), `/desktop` (+/app), `/exit` (+/quit), `/rewind` (+/checkpoint), `/resume` (+/continue), `/remote-control` (+/rc), `/mobile` (+/ios, /android) | ✅ COMPLETE (added alias notations to all 8 command descriptions) |
-| 3 | MED | Changed Description | Update `/diff` — "Open an interactive diff viewer showing uncommitted changes and per-turn diffs" | ✅ COMPLETE (updated description at #44 in Project tag) |
-| 4 | MED | Changed Description | Update `/memory` — "Edit CLAUDE.md memory files, enable or disable auto-memory, and view auto-memory entries" | ✅ COMPLETE (updated description at #37 in Memory tag) |
-| 5 | MED | Changed Description | Update `/copy` — "Copy the last assistant response to clipboard. Shows interactive picker for code blocks" | ✅ COMPLETE (updated description at #27 in Export tag) |
-| 6 | MED | Changed Description | Update `/mobile` — "Show QR code to download the Claude mobile app" | ✅ COMPLETE (updated description + aliases at #52 in Remote tag) |
-| 7 | MED | Changed Description | Update `/remote-control` — "Make this session available for remote control from claude.ai" | ✅ COMPLETE (updated description + alias at #53 in Remote tag) |
-| 8 | LOW | Frontmatter Scope | 6 skill-only fields still absent from report (intentional scoping) | ❌ INVALID (skill-only fields — same determination as v2.1.74 run) |
+| 1 | HIGH | 新别名 | 在 `/fork` 条目中添加 `Alias: /branch` (v2.1.77 将 fork 重命名为 branch) | ✅ COMPLETE (已在 Session 标签 #59 的 /fork 中添加 "Alias: /branch") |
+| 2 | HIGH | 新别名 | 为 8 个 Command 添加别名: `/clear` (+/reset, /new), `/config` (+/settings), `/desktop` (+/app), `/exit` (+/quit), `/rewind` (+/checkpoint), `/resume` (+/continue), `/remote-control` (+/rc), `/mobile` (+/ios, /android) | ✅ COMPLETE (已在全部 8 个 Command 描述中添加别名标注) |
+| 3 | MED | 描述变更 | 更新 `/diff` — "Open an interactive diff viewer showing uncommitted changes and per-turn diffs" | ✅ COMPLETE (已更新 Project 标签中 #44 的描述) |
+| 4 | MED | 描述变更 | 更新 `/memory` — "Edit CLAUDE.md memory files, enable or disable auto-memory, and view auto-memory entries" | ✅ COMPLETE (已更新 Memory 标签中 #37 的描述) |
+| 5 | MED | 描述变更 | 更新 `/copy` — "Copy the last assistant response to clipboard. Shows interactive picker for code blocks" | ✅ COMPLETE (已更新 Export 标签中 #27 的描述) |
+| 6 | MED | 描述变更 | 更新 `/mobile` — "Show QR code to download the Claude mobile app" | ✅ COMPLETE (已更新 Remote 标签中 #52 的描述和别名) |
+| 7 | MED | 描述变更 | 更新 `/remote-control` — "Make this session available for remote control from claude.ai" | ✅ COMPLETE (已更新 Remote 标签中 #53 的描述和别名) |
+| 8 | LOW | Frontmatter 范围 | 6 个仅限 Skill 的字段仍未收录在报告中（属于有意的范围界定） | ❌ INVALID (仅限 Skill 的字段 — 与 v2.1.74 运行的判定相同) |
 
 ---
 
 ## [2026-03-18 11:38 PM PKT] Claude Code v2.1.78
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/voice` to Config tag — toggle push-to-talk voice dictation | ✅ COMPLETE (added as #15 in Config tag) |
-| 2 | HIGH | Inverted Alias | Swap `/fork` → `/branch` as primary, `/fork` as alias | ✅ COMPLETE (swapped to `/branch` at #56 in Session tag, re-sorted alphabetically) |
-| 3 | MED | New Alias | Add `/allowed-tools` alias to `/permissions` | ✅ COMPLETE (added alias to #7 in Config tag) |
-| 4 | MED | New Argument | Add `[N]` argument syntax to `/copy` | ✅ COMPLETE (updated to `/copy [N]` at #28 in Export tag) |
-| 5 | LOW | Frontmatter Scope | 6 skill-only fields absent from report (intentional scoping) | ❌ INVALID (skill-only fields — same determination as v2.1.74 and v2.1.77 runs) |
+| 1 | HIGH | 新 Command | 在 Config 标签中添加 `/voice` — 切换按键说话语音输入 | ✅ COMPLETE (已添加为 Config 标签中的 #15) |
+| 2 | HIGH | 别名互换 | 将 `/fork` → `/branch` 设为主命令，`/fork` 设为别名 | ✅ COMPLETE (已在 Session 标签 #56 中互换为 `/branch`，按字母顺序重新排列) |
+| 3 | MED | 新别名 | 为 `/permissions` 添加 `/allowed-tools` 别名 | ✅ COMPLETE (已在 Config 标签 #7 中添加别名) |
+| 4 | MED | 新参数 | 为 `/copy` 添加 `[N]` 参数语法 | ✅ COMPLETE (已在 Export 标签 #28 中更新为 `/copy [N]`) |
+| 5 | LOW | Frontmatter 范围 | 6 个仅限 Skill 的字段未收录在报告中（属于有意的范围界定） | ❌ INVALID (仅限 Skill 的字段 — 与 v2.1.74 和 v2.1.77 运行的判定相同) |
 
 ---
 
 ## [2026-03-19 11:54 AM PKT] Claude Code v2.1.79
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | LOW | Frontmatter Scope | 6 skill-only fields absent from report (intentional scoping) | ❌ INVALID (skill-only fields — same determination as v2.1.74, v2.1.77, and v2.1.78 runs) |
+| 1 | LOW | Frontmatter 范围 | 6 个仅限 Skill 的字段未收录在报告中（属于有意的范围界定） | ❌ INVALID (仅限 Skill 的字段 — 与 v2.1.74、v2.1.77 和 v2.1.78 运行的判定相同) |
 
 ---
 
 ## [2026-03-20 08:33 AM PKT] Claude Code v2.1.80
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | MED | New Field | Add `effort` to frontmatter table — override model effort level when command is invoked (v2.1.80) | ✅ COMPLETE (added as 5th field, then repositioned to 8th when full field set was added) |
-| 2 | HIGH | QA Correction | Add 6 missing fields (`name`, `disable-model-invocation`, `user-invocable`, `context`, `agent`, `hooks`) — official docs state commands support "the same frontmatter" as skills; previous INVALID determinations (v2.1.74–v2.1.79) were incorrect | ✅ COMPLETE (added all 6 fields, count updated 5 → 11, field order matches official docs) |
-| 3 | HIGH | Cross-Report Fix | Add `effort` to skills report (`claude-skills.md`) — field was missing there too | ✅ COMPLETE (added as 8th field in skills report, count updated 10 → 11) |
+| 1 | MED | 新字段 | 在 frontmatter 表中添加 `effort` — 调用 Command 时覆盖模型努力程度 (v2.1.80) | ✅ COMPLETE (已添加为第 5 个字段，后在添加完整字段集时重新定位为第 8 个) |
+| 2 | HIGH | QA 修正 | 添加 6 个缺失字段 (`name`, `disable-model-invocation`, `user-invocable`, `context`, `agent`, `hooks`) — 官方文档声明 Command 支持与 Skill "相同的 frontmatter"；之前的 INVALID 判定 (v2.1.74–v2.1.79) 是不正确的 | ✅ COMPLETE (已添加全部 6 个字段，计数从 5 更新为 11，字段顺序与官方文档一致) |
+| 3 | HIGH | 跨报告修复 | 在 Skill 报告 (`claude-skills.md`) 中添加 `effort` — 该字段在那里也缺失 | ✅ COMPLETE (已在 Skill 报告中添加为第 8 个字段，计数从 10 更新为 11) |
 
 ---
 
 ## [2026-03-21 09:08 PM PKT] Claude Code v2.1.81
 
-No priority action items — report is fully in sync with official documentation (11 frontmatter fields, 63 built-in commands).
+无优先操作项 — 报告与官方文档完全同步 (11 个 frontmatter 字段，63 个内置 Command)。
 
 ---
 
 ## [2026-03-23 09:48 PM PKT] Claude Code v2.1.81
 
-No priority action items — report is fully in sync with official documentation (11 frontmatter fields, 63 built-in commands).
+无优先操作项 — 报告与官方文档完全同步 (11 个 frontmatter 字段，63 个内置 Command)。
 
 ---
 
 ## [2026-03-25 08:07 PM PKT] Claude Code v2.1.83
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/schedule [description]` to Remote tag — Create, update, list, or run Cloud scheduled tasks | ✅ COMPLETE (added as #56 in Remote tag, count updated 63 → 64) |
+| 1 | HIGH | 新 Command | 在 Remote 标签中添加 `/schedule [description]` — 创建、更新、列出或运行 Cloud 计划任务 | ✅ COMPLETE (已添加为 Remote 标签中的 #56，计数从 63 更新为 64) |
 
 ---
 
 ## [2026-03-26 01:01 PM PKT] Claude Code v2.1.84
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Field | Add `shell` to frontmatter table — shell for `!command` blocks (`bash` or `powershell`) | ✅ COMPLETE (added as 12th field before `hooks`, count updated 11 → 12) |
-| 2 | LOW | Changed Argument | Add `[on\|off]` argument hint to `/fast` command | ✅ COMPLETE (updated `/fast` to `/fast [on\|off]` at #40 in Model tag) |
+| 1 | HIGH | 新字段 | 在 frontmatter 表中添加 `shell` — `!command` 块的 shell 类型 (`bash` 或 `powershell`) | ✅ COMPLETE (已添加为第 12 个字段，位于 `hooks` 之前，计数从 11 更新为 12) |
+| 2 | LOW | 参数变更 | 为 `/fast` Command 添加 `[on\|off]` 参数提示 | ✅ COMPLETE (已在 Model 标签 #40 中将 `/fast` 更新为 `/fast [on\|off]`) |
 
 ---
 
 ## [2026-03-27 06:25 PM PKT] Claude Code v2.1.85
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Field | Add `paths` to frontmatter table — glob patterns that limit when a skill is activated | ✅ COMPLETE (added as 6th field after `user-invocable`, count updated 12 → 13) |
+| 1 | HIGH | 新字段 | 在 frontmatter 表中添加 `paths` — 限制 Skill 何时被激活的 glob 模式 | ✅ COMPLETE (已添加为 `user-invocable` 之后的第 6 个字段，计数从 12 更新为 13) |
 
 ---
 
 ## [2026-03-28 06:05 PM PKT] Claude Code v2.1.86
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | MED | Changed Argument | Update `/add-dir` — add `<path>` required argument hint per official docs | ✅ COMPLETE (updated at #44 in Project tag) |
-| 2 | MED | Changed Argument | Update `/branch` — add `[name]` optional argument hint per official docs | ✅ COMPLETE (updated at #57 in Session tag) |
-| 3 | MED | Changed Argument | Update `/model` — add `[model]` optional argument hint per official docs | ✅ COMPLETE (updated at #41 in Model tag) |
-| 4 | MED | Changed Argument | Update `/plan` — add `[description]` optional argument hint per official docs | ✅ COMPLETE (updated at #43 in Model tag) |
-| 5 | MED | Changed Argument | Update `/pr-comments` — add `[PR]` optional argument hint per official docs | ✅ COMPLETE (updated at #47 in Project tag) |
-| 6 | MED | Changed Argument | Update `/passes` — remove `[number]` argument hint (not in official docs) | ✅ COMPLETE (updated at #42 in Model tag) |
-| 7 | MED | Changed Argument | Update `/rename` — change from `<name>` (required) to `[name]` (optional) per official docs | ✅ COMPLETE (updated at #62 in Session tag) |
-| 8 | LOW | Changed Argument | Update `/compact` — change argument label from `[prompt]` to `[instructions]` per official docs | ✅ COMPLETE (updated at #60 in Session tag) |
-| 9 | LOW | Changed Argument | Update `/feedback` — change argument label from `[description]` to `[report]` per official docs | ✅ COMPLETE (updated at #24 in Debug tag) |
+| 1 | MED | 参数变更 | 更新 `/add-dir` — 根据官方文档添加 `<path>` 必需参数提示 | ✅ COMPLETE (已在 Project 标签 #44 中更新) |
+| 2 | MED | 参数变更 | 更新 `/branch` — 根据官方文档添加 `[name]` 可选参数提示 | ✅ COMPLETE (已在 Session 标签 #57 中更新) |
+| 3 | MED | 参数变更 | 更新 `/model` — 根据官方文档添加 `[model]` 可选参数提示 | ✅ COMPLETE (已在 Model 标签 #41 中更新) |
+| 4 | MED | 参数变更 | 更新 `/plan` — 根据官方文档添加 `[description]` 可选参数提示 | ✅ COMPLETE (已在 Model 标签 #43 中更新) |
+| 5 | MED | 参数变更 | 更新 `/pr-comments` — 根据官方文档添加 `[PR]` 可选参数提示 | ✅ COMPLETE (已在 Project 标签 #47 中更新) |
+| 6 | MED | 参数变更 | 更新 `/passes` — 移除 `[number]` 参数提示（官方文档中没有） | ✅ COMPLETE (已在 Model 标签 #42 中更新) |
+| 7 | MED | 参数变更 | 更新 `/rename` — 根据官方文档从 `<name>`（必需）改为 `[name]`（可选） | ✅ COMPLETE (已在 Session 标签 #62 中更新) |
+| 8 | LOW | 参数变更 | 更新 `/compact` — 根据官方文档将参数标签从 `[prompt]` 改为 `[instructions]` | ✅ COMPLETE (已在 Session 标签 #60 中更新) |
+| 9 | LOW | 参数变更 | 更新 `/feedback` — 根据官方文档将参数标签从 `[description]` 改为 `[report]` | ✅ COMPLETE (已在 Debug 标签 #24 中更新) |
 
 ---
 
 ## [2026-03-31 06:55 PM PKT] Claude Code v2.1.88
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | MED | Description Sync | Synced all 43 command descriptions to match official docs — behavioral clarifications (`/vim` toggle, `/sandbox` toggle, `/hooks` view), expanded detail (`/effort` persistence, `/copy` SSH write, `/model` effort arrows), and wording alignment across Auth, Config, Context, Debug, Export, Extensions, Model, Project, Remote, and Session tags | ✅ COMPLETE (all 64 descriptions now match official docs at code.claude.com/docs/en/commands) |
+| 1 | MED | 描述同步 | 同步全部 43 个 Command 描述以匹配官方文档 — 行为澄清 (`/vim` 切换, `/sandbox` 切换, `/hooks` 查看)，扩展详情 (`/effort` 持久性, `/copy` SSH 写入, `/model` 努力程度箭头)，以及 Auth、Config、Context、Debug、Export、Extensions、Model、Project、Remote 和 Session 标签的措辞对齐 | ✅ COMPLETE (全部 64 个描述现已与 code.claude.com/docs/en/commands 的官方文档匹配) |
 
 ---
 
 ## [2026-04-01 12:26 PM PKT] Claude Code v2.1.89
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | LOW | Changed Description | Update `/init` — official docs now use `CLAUDE_CODE_NEW_INIT=1` instead of `=true` | ✅ COMPLETE (updated env var value from `=true` to `=1` to match official docs) |
+| 1 | LOW | 描述变更 | 更新 `/init` — 官方文档现使用 `CLAUDE_CODE_NEW_INIT=1` 而非 `=true` | ✅ COMPLETE (已将环境变量值从 `=true` 更新为 `=1` 以匹配官方文档) |
 
 ---
 
 ## [2026-04-02 09:14 PM PKT] Claude Code v2.1.90
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | MED | Changed Description | Update `/permissions` — official docs expanded to describe interactive dialog with scope rules, directory management, and auto mode denial review | ✅ COMPLETE (updated description to match official docs) |
-| 2 | MED | New Alias | Add `/bashes` alias to `/tasks` command per official docs | ✅ COMPLETE (added "Alias: /bashes" to /tasks at #27 in Debug tag) |
+| 1 | MED | 描述变更 | 更新 `/permissions` — 官方文档扩展为描述交互式对话框，包含范围规则、目录管理和自动模式拒绝审查 | ✅ COMPLETE (已更新描述以匹配官方文档) |
+| 2 | MED | 新别名 | 根据官方文档为 `/tasks` Command 添加 `/bashes` 别名 | ✅ COMPLETE (已在 Debug 标签 #27 的 /tasks 中添加 "Alias: /bashes") |
 
 ---
 
 ## [2026-04-03 08:34 PM PKT] Claude Code v2.1.91
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/powerup` to Config tag — Discover Claude Code features through quick interactive lessons with animated demos | ✅ COMPLETE (added as #26 in Debug tag — resolved in v2.1.92 run) |
+| 1 | HIGH | 新 Command | 在 Config 标签中添加 `/powerup` — 通过带动画演示的快速交互课程探索 Claude Code 功能 | ✅ COMPLETE (已添加为 Debug 标签中的 #26 — 在 v2.1.92 运行中解决) |
 
 ---
 
 ## [2026-04-04 10:40 PM PKT] Claude Code v2.1.92
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/powerup` to Debug tag — Discover Claude Code features through quick interactive lessons with animated demos | ✅ COMPLETE (added as #26 in Debug tag, recurring from v2.1.91) |
-| 2 | HIGH | New Command | Add `/setup-bedrock` to Auth tag — Configure Amazon Bedrock authentication, region, and model pins through an interactive wizard | ✅ COMPLETE (added as #3 in Auth tag) |
-| 3 | HIGH | New Command | Add `/ultraplan <prompt>` to Model tag — Draft a plan in an ultraplan session, review it in your browser, then execute remotely or send it back | ✅ COMPLETE (added as #45 in Model tag) |
-| 4 | HIGH | Removed Command | Remove `/vim` from Config tag — removed in v2.1.92 (max-version: 2.1.91), use `/config` Editor mode instead | ✅ COMPLETE (removed from Config tag) |
-| 5 | HIGH | Removed Command | Remove `/pr-comments [PR]` from Project tag — removed in v2.1.91 (max-version: 2.1.90), ask Claude directly | ✅ COMPLETE (removed from Project tag) |
-| 6 | MED | Changed Description | Update `/release-notes` — now "View the changelog in an interactive version picker. Select a specific version to see its release notes, or choose to show all versions." | ✅ COMPLETE (updated description at #27 in Debug tag) |
+| 1 | HIGH | 新 Command | 在 Debug 标签中添加 `/powerup` — 通过带动画演示的快速交互课程探索 Claude Code 功能 | ✅ COMPLETE (已添加为 Debug 标签中的 #26，从 v2.1.91 延续) |
+| 2 | HIGH | 新 Command | 在 Auth 标签中添加 `/setup-bedrock` — 通过交互式向导配置 Amazon Bedrock 认证、区域和模型固定 | ✅ COMPLETE (已添加为 Auth 标签中的 #3) |
+| 3 | HIGH | 新 Command | 在 Model 标签中添加 `/ultraplan <prompt>` — 在 ultraplan 会话中起草计划，在浏览器中审查，然后远程执行或发回 | ✅ COMPLETE (已添加为 Model 标签中的 #45) |
+| 4 | HIGH | 已移除 Command | 从 Config 标签中移除 `/vim` — 在 v2.1.92 中移除 (max-version: 2.1.91)，请改用 `/config` Editor mode | ✅ COMPLETE (已从 Config 标签中移除) |
+| 5 | HIGH | 已移除 Command | 从 Project 标签中移除 `/pr-comments [PR]` — 在 v2.1.91 中移除 (max-version: 2.1.90)，请直接询问 Claude | ✅ COMPLETE (已从 Project 标签中移除) |
+| 6 | MED | 描述变更 | 更新 `/release-notes` — 现为 "View the changelog in an interactive version picker. Select a specific version to see its release notes, or choose to show all versions." | ✅ COMPLETE (已更新 Debug 标签 #27 的描述) |
 
 ---
 
 ## [2026-04-08 09:35 PM PKT] Claude Code v2.1.96
 
-No priority action items — report is fully in sync with official documentation (13 frontmatter fields, 65 built-in commands).
+无优先操作项 — 报告与官方文档完全同步 (13 个 frontmatter 字段，65 个内置 Command)。
 
 ---
 
 ## [2026-04-09 11:31 PM PKT] Claude Code v2.1.97
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/autofix-pr [prompt]` to Remote tag — Spawn a web session that watches the current branch's PR and pushes fixes when CI fails or reviewers leave comments | ✅ COMPLETE (added as #51 in Remote tag, count updated 65 → 68) |
-| 2 | HIGH | New Command | Add `/teleport` to Remote tag — Pull a Claude Code on the web session into this terminal. Alias: `/tp` | ✅ COMPLETE (added as #59 in Remote tag) |
-| 3 | HIGH | New Command | Add `/web-setup` to Remote tag — Connect GitHub account to Claude Code on the web using local `gh` CLI credentials | ✅ COMPLETE (added as #60 in Remote tag) |
-| 4 | MED | Changed Description | Update `/add-dir` — official docs now include caveat about `.claude/` config not being discovered from added directory | ✅ COMPLETE (updated description at #46 in Project tag) |
+| 1 | HIGH | 新 Command | 在 Remote 标签中添加 `/autofix-pr [prompt]` — 生成一个 Web 会话，监视当前分支的 PR，并在 CI 失败或审查者留下评论时推送修复 | ✅ COMPLETE (已添加为 Remote 标签中的 #51，计数从 65 更新为 68) |
+| 2 | HIGH | 新 Command | 在 Remote 标签中添加 `/teleport` — 将 Web 上的 Claude Code 会话拉入本终端。Alias: `/tp` | ✅ COMPLETE (已添加为 Remote 标签中的 #59) |
+| 3 | HIGH | 新 Command | 在 Remote 标签中添加 `/web-setup` — 使用本地 `gh` CLI 凭证将 GitHub 账户连接到 Web 上的 Claude Code | ✅ COMPLETE (已添加为 Remote 标签中的 #60) |
+| 4 | MED | 描述变更 | 更新 `/add-dir` — 官方文档现包含关于 `.claude/` 配置不会从添加的目录中被发现的注意事项 | ✅ COMPLETE (已更新 Project 标签 #46 的描述) |
 
 ---
 
 ## [2026-04-13 08:00 PM PKT] Claude Code v2.1.101
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Command | Add `/setup-vertex` to Auth tag — Configure Google Vertex AI authentication, project, region, and model pins through an interactive wizard. Only visible when `CLAUDE_CODE_USE_VERTEX=1` is set | ✅ COMPLETE (added as #4 in Auth tag, count updated 68 → 69) |
+| 1 | HIGH | 新 Command | 在 Auth 标签中添加 `/setup-vertex` — 通过交互式向导配置 Google Vertex AI 认证、项目、区域和模型固定。仅在设置 `CLAUDE_CODE_USE_VERTEX=1` 时可见 | ✅ COMPLETE (已添加为 Auth 标签中的 #4，计数从 68 更新为 69) |
 
 ---
 
 ## [2026-04-14 11:13 PM PKT] Claude Code v2.1.107
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | HIGH | New Field | Add `when_to_use` to frontmatter table — additional context for when Claude should invoke the skill, appended to `description` in the listing (count 13 → 14) | ✅ COMPLETE (added after `description` field, count updated 13 → 14) |
-| 2 | HIGH | New Command | Add `/team-onboarding` to Project tag — Generate a team onboarding guide from Claude Code usage history (count 69 → 70) | ✅ COMPLETE (added as #52 in Project tag, count updated 69 → 70) |
-| 3 | MED | Scope Decision | 5 bundled skills (`/batch`, `/claude-api`, `/debug`, `/loop`, `/simplify`) listed in official docs unified table but excluded per report's current scoping disclaimer | ❌ INVALID (user chose to keep report scoped to built-in commands only — disclaimer retained) |
-| 4 | MED | Changed Description | Update `/doctor` — add "Press `f` to have Claude fix any reported issues" | ✅ COMPLETE (added status icons and `f` key fix detail to description) |
-| 5 | MED | Changed Description | Update `/schedule` — terminology changed from "Cloud scheduled tasks" to "routines" | ✅ COMPLETE (updated terminology in description) |
+| 1 | HIGH | 新字段 | 在 frontmatter 表中添加 `when_to_use` — Claude 何时应调用 Skill 的附加上下文，附加到列表中 `description` 之后 (计数 13 → 14) | ✅ COMPLETE (已添加在 `description` 字段之后，计数从 13 更新为 14) |
+| 2 | HIGH | 新 Command | 在 Project 标签中添加 `/team-onboarding` — 从 Claude Code 使用历史生成团队入职指南 (计数 69 → 70) | ✅ COMPLETE (已添加为 Project 标签中的 #52，计数从 69 更新为 70) |
+| 3 | MED | 范围决定 | 官方文档统一表中列出的 5 个捆绑 Skill (`/batch`, `/claude-api`, `/debug`, `/loop`, `/simplify`) 按报告当前范围声明排除 | ❌ INVALID (用户选择将报告范围限定为仅内置 Command — 保留免责声明) |
+| 4 | MED | 描述变更 | 更新 `/doctor` — 添加 "Press `f` to have Claude fix any reported issues" | ✅ COMPLETE (在描述中添加了状态图标和 `f` 键修复详情) |
+| 5 | MED | 描述变更 | 更新 `/schedule` — 术语从 "Cloud scheduled tasks" 改为 "routines" | ✅ COMPLETE (已更新描述中的术语) |
 
 ---
 
 ## [2026-04-16 08:20 PM PKT] Claude Code v2.1.110
 
-| # | Priority | Type | Action | Status |
+| # | 优先级 | 类型 | 操作 | 状态 |
 |---|----------|------|--------|--------|
-| 1 | MED | New Alias | Add `/undo` alias to `/rewind` entry — added in v2.1.108 | ✅ COMPLETE (added `/undo` alongside existing `/checkpoint` alias at #70 in Session tag) |
+| 1 | MED | 新别名 | 为 `/rewind` 条目添加 `/undo` 别名 — 在 v2.1.108 中添加 | ✅ COMPLETE (已在 Session 标签 #70 中与现有 `/checkpoint` 别名一起添加 `/undo`) |

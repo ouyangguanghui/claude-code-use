@@ -1,100 +1,100 @@
-# Linux Setup
+# Linux 设置
 
-[Back to Day 0](README.md)
+[返回第 0 天](README.md)
 
-## Prerequisites
+## 前置条件
 
-You need **Node.js v18 or higher** and **npm**.
+你需要 **Node.js v18 或更高版本** 和 **npm**。
 
-## Step 1: Install Node.js
+## 步骤 1：安装 Node.js
 
-### Option A: Via nodejs.org Download Page with fnm (Recommended)
+### 选项 A：通过 nodejs.org 下载页面使用 fnm（推荐）
 
-**fnm** (Fast Node Manager) is officially recommended by Node.js. It's fast, lightweight, and lets you switch Node versions easily if needed later.
+**fnm**（Fast Node Manager）是 Node.js 官方推荐的工具。它快速、轻量，并且在以后需要时可以轻松切换 Node 版本。
 
-1. Open your browser and go to [nodejs.org/en/download](https://nodejs.org/en/download).
+1. 打开浏览器，访问 [nodejs.org/en/download](https://nodejs.org/en/download)。
 
-2. You'll see a row of dropdowns that says: **"Get Node.js® vXX.XX.X (LTS) for __ using __ with __"**. Set the dropdowns as follows:
+2. 你会看到一行下拉框，显示：**"Get Node.js® vXX.XX.X (LTS) for __ using __ with __"**。设置下拉框如下：
 
-   | Dropdown | Select |
-   |----------|--------|
-   | Version | **vXX.XX.X (LTS)** — keep the default LTS version, don't change it |
+   | 下拉框 | 选择 |
+   |--------|------|
+   | Version | **vXX.XX.X (LTS)** — 保持默认的 LTS 版本，不要更改 |
    | OS | **Linux** |
-   | Package Manager | **fnm** (under "Recommended (Official)") |
-   | Package Format | **npm** — keep the default |
+   | Package Manager | **fnm**（在 "Recommended (Official)" 下） |
+   | Package Format | **npm** — 保持默认 |
 
-3. The page will show you the exact commands to run. Open your terminal and copy-paste them. They will look something like this:
+3. 页面会显示你需要运行的确切命令。打开终端并复制粘贴它们。大致如下：
 
    ```bash
-   # Step 1 — Install fnm
+   # 步骤 1 — 安装 fnm
    curl -fsSL https://fnm.vercel.app/install | bash
 
-   # Step 2 — Restart your terminal or reload your shell profile
-   source ~/.bashrc   # or: source ~/.zshrc (if you use zsh)
+   # 步骤 2 — 重启终端或重新加载 shell 配置
+   source ~/.bashrc   # 或者: source ~/.zshrc (如果你用 zsh)
 
-   # Step 3 — Install Node.js
-   fnm install 24   # The page will show the exact version number
+   # 步骤 3 — 安装 Node.js
+   fnm install 24   # 页面会显示确切的版本号
    ```
 
-   > The version number may differ from above — always use whatever the website shows.
+   > 版本号可能与上面不同 — 始终使用网站上显示的版本。
 
-4. **Close and reopen your terminal** (or run the `source` command above) so that `fnm`, `node`, and `npm` are available.
+4. **关闭并重新打开终端**（或运行上面的 `source` 命令），使 `fnm`、`node` 和 `npm` 可用。
 
-> **Why fnm?** It's in the "Recommended (Official)" category on the Node.js download page. Like nvm, it installs Node into your home directory so you never need `sudo` for npm global installs — but fnm is significantly faster (written in Rust) and works the same across Windows, macOS, and Linux.
+> **为什么选择 fnm？** 它在 Node.js 下载页面的 "Recommended (Official)" 分类中。像 nvm 一样，它将 Node 安装到你的主目录中，所以你永远不需要 `sudo` 来进行 npm 全局安装 — 但 fnm 明显更快（用 Rust 编写）且在 Windows、macOS 和 Linux 上工作方式相同。
 
-### Option B: Using your distro's package manager
+### 选项 B：使用发行版的包管理器
 
-This is quicker but may install an older version of Node.js. **Check the version after installing** — if it's below v18, use Option A instead.
+这种方式更快，但可能安装较旧版本的 Node.js。**安装后检查版本** — 如果低于 v18，请使用选项 A。
 
-**Ubuntu / Debian:**
+**Ubuntu / Debian：**
 
 ```bash
 sudo apt update
 sudo apt install -y nodejs npm
 
-# Check the version
-node --version   # Must be v18 or higher
+# 检查版本
+node --version   # 必须是 v18 或更高
 ```
 
-**Fedora:**
+**Fedora：**
 
 ```bash
 sudo dnf install -y nodejs npm
 ```
 
-**Arch Linux:**
+**Arch Linux：**
 
 ```bash
 sudo pacman -S nodejs npm
 ```
 
-### Option C: NodeSource (Latest LTS via apt, no nvm)
+### 选项 C：NodeSource（通过 apt 获取最新 LTS，不使用 nvm）
 
-For Ubuntu/Debian users who want the latest LTS without using nvm:
+适用于想要不使用 nvm 就获得最新 LTS 的 Ubuntu/Debian 用户：
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
 
-## Step 2: Verify Node.js
+## 步骤 2：验证 Node.js
 
 ```bash
 node --version
 npm --version
 ```
 
-Both should print version numbers. `node --version` must show v18.x or higher.
+两者都应打印版本号。`node --version` 必须显示 v18.x 或更高。
 
-## Step 3: Install Claude Code
+## 步骤 3：安装 Claude Code
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-> **Permission error?**
-> - If you used **fnm** or **nvm**: this shouldn't happen. Check that it's active (`which node` should point to a path inside your home directory, not `/usr/...`).
-> - If you used a system install: either use `sudo npm install -g @anthropic-ai/claude-code` or fix npm's global directory permissions:
+> **权限错误？**
+> - 如果你使用了 **fnm** 或 **nvm**：这不应该发生。检查它是否已激活（`which node` 应指向你主目录内的路径，而非 `/usr/...`）。
+> - 如果你使用了系统安装：可以使用 `sudo npm install -g @anthropic-ai/claude-code`，或修复 npm 全局目录权限：
 >   ```bash
 >   mkdir -p ~/.npm-global
 >   npm config set prefix '~/.npm-global'
@@ -102,17 +102,17 @@ npm install -g @anthropic-ai/claude-code
 >   source ~/.bashrc
 >   ```
 
-## Step 4: Verify Claude Code
+## 步骤 4：验证 Claude Code
 
 ```bash
 claude --version
 ```
 
-You should see the Claude Code version printed. Now head back to [README.md](README.md) for authentication setup.
+你应该看到 Claude Code 版本号打印出来。现在返回 [README.md](README.md) 进行身份验证设置。
 
 ---
 
-## Notes
+## 注意事项
 
-- **WSL (Windows Subsystem for Linux):** This guide works inside WSL too. Just follow these steps from your WSL terminal.
-- **PATH issues:** If `claude` is not found after install, ensure npm's global bin is in your PATH. Run `npm config get prefix` — the `bin/` subdirectory of that path needs to be in your PATH.
+- **WSL（Windows Subsystem for Linux）：** 本指南在 WSL 中也适用。只需在 WSL 终端中按照这些步骤操作即可。
+- **PATH 问题：** 如果安装后找不到 `claude`，确保 npm 的全局 bin 目录在你的 PATH 中。运行 `npm config get prefix` — 该路径的 `bin/` 子目录需要在你的 PATH 中。
