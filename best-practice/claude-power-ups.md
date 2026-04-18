@@ -4,12 +4,7 @@
 
 通过动画演示教授 Claude Code 功能的交互式课程。每个增强功能教授一个大多数人容易忽略的 Claude Code 能力。在 v2.1.90 中引入。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
