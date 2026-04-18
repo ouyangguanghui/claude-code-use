@@ -4,12 +4,7 @@
 
 从终端启动 Claude Code 时的启动参数、顶级子命令和启动环境变量参考。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
