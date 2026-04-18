@@ -2,12 +2,7 @@
 
 API 级别功能（现已正式发布），可减少 token 消耗、延迟，并提高工具准确性。随 Opus/Sonnet 4.6 发布。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ## 目录
 
