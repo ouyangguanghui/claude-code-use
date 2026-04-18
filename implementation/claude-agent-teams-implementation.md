@@ -2,16 +2,11 @@
 
 ![Last Updated](https://img.shields.io/badge/Last_Updated-Mar_12%2C_2026-white?style=flat&labelColor=555)
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
-<a href="#time-orchestration"><img src="../!/tags/implemented-hd.svg" alt="Implemented"></a>
+**✅ 已实现**
 
 <p align="center">
   <img src="assets/impl-agent-teams.png" alt="代理团队实战 — 使用 tmux 的分屏模式" width="100%">
@@ -21,7 +16,7 @@
 
 ---
 
-## ![如何使用](../!/tags/how-to-use.svg)
+## 如何使用
 
 时间编排工作流完全由代理团队构建。运行最终产品：
 
@@ -35,7 +30,7 @@ claude
 
 ---
 
-## ![如何实现](../!/tags/how-to-implement.svg)
+## 如何实现
 
 你可以使用代理团队创建天气编排工作流的副本 — 在这个示例中，时间编排工作流完全由代理团队构建。
 
