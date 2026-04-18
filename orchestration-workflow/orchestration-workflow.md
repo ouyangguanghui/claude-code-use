@@ -2,12 +2,7 @@
 
 本文档描述了 **命令 → 代理（含技能）→ 技能** 编排工作流，通过天气数据获取和 SVG 渲染系统进行演示。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ## 系统概述
 
