@@ -2,16 +2,11 @@
 
 ![Last Updated](https://img.shields.io/badge/Last_Updated-Mar_02%2C_2026-white?style=flat&labelColor=555)
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ---
 
-<a href="#weather-svg-creator"><img src="../!/tags/implemented-hd.svg" alt="Implemented"></a>
+**✅ 已实现**
 
 本仓库实现了两个技能，作为 **命令 → 代理 → 技能** 架构模式的一部分，演示了两种不同的技能调用模式：**代理技能**（预加载）和**技能**（直接调用）。
 
@@ -100,7 +95,7 @@ Fetch the current temperature for Dubai, UAE in the requested unit
 
 ---
 
-## ![如何使用](../!/tags/how-to-use.svg)
+## 如何使用
 
 **技能** — 通过斜杠命令直接调用：
 ```bash
@@ -110,7 +105,7 @@ $ claude
 
 ---
 
-## ![如何实现](../!/tags/how-to-implement.svg)
+## 如何实现
 
 让 Claude 为你创建一个 — 它会在 `.claude/skills/my-skill/SKILL.md` 中生成带有 YAML 前置元数据和正文的 markdown 文件
 
