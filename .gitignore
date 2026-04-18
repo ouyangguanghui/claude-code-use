@@ -1,2 +1,7 @@
 plan/
 .vscode/
+
+# 生成的输出文件
+orchestration-workflow/output.md
+orchestration-workflow/weather.svg
+agent-teams/output/
