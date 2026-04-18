@@ -5,12 +5,7 @@
 
 Claude Code `settings.json` 文件中所有可用配置选项的综合指南。截至 v2.1.110，Claude Code 提供 **60+ 个设置**和 **175+ 个环境变量**（使用 `settings.json` 中的 `"env"` 字段可避免包装脚本）。
 
-<table width="100%">
-<tr>
-<td><a href="../">← 返回 Claude Code 最佳实践</a></td>
-<td align="right"><img src="../!/claude-jumping.svg" alt="Claude" width="60" /></td>
-</tr>
-</table>
+[← 返回 Claude Code 最佳实践](../)
 
 ## 目录
 
